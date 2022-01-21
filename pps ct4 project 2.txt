@@ -1,0 +1,24 @@
+#include<stdio.h>  
+int main(){     
+const int SECTION=2; 
+const int DAY=7;
+int Books_issued[SECTION][DAY]; 
+for (int i = 0; i < SECTION; ++i) 
+{for(int j = 0; j < DAY; ++j)
+ {     printf("SECTION%d,DAY%d:",i+1,j+1);
+scanf("%d",  &Books_issued[i][j]);}}
+printf("\nDisplayingvalues:\n");
+for (int i = 0; i < SECTION; ++i) 
+{  for(int j = 0; j < DAY; ++j)
+{printf("SECTION %d,DAY %d =%d\n",i+1,j+1,Books_issued[i][j]);}
+}
+//total number of books issued
+int i,j,sum=0;
+for(i=0;i<SECTION;i++){
+  for(j=0;j<DAY;j++){
+        sum=sum+Books_issued[i][j];
+    }
+}
+ printf("The total number of books issued are %d",sum);
+return 0;}
+
